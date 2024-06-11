@@ -28,18 +28,9 @@
 	while(elemento != 27)
 	{
 		Nv_caixa = NovaCaixa(elemento);
-	//	if(Lista == NULL)
-//		{
-//			Lista = Nv_caixa;
-//		}
-//		else
-//		{
-			Nv_caixa -> prox = Lista;  //pular para o proximo elemento
-			Lista = Nv_caixa;
-			// o primeiro elemento colocado vai pra frente e o proximo entra a tras 
-			//[cabe] -> [elem2[pos]] -> [elem1[pos]]
-			// o novo elemento aponta pro primeiro da caixa, assim substituindo a primeira posição
-//		}
+		Nv_caixa -> prox = Lista;  //pular para o proximo elemento
+		Lista = Nv_caixa;
+
 		printf("Elemento: ");
 		elemento = getche();
 	}
@@ -120,11 +111,11 @@
 		}
 		else
 		{
-			while(Lista -> prox != NULL )// com essa condição ele não exibe o ultimo elem
+			while(Lista -> prox != NULL )// com essa condiÃ§Ã£o ele nÃ£o exibe o ultimo elem
 			{
 				printf("%c\n",Lista->info);
 				Lista = Lista -> prox; // faz a lista andar pra frente
-				//[elem1[prox]] prox é a possição do proximo elemento
+				//[elem1[prox]] prox Ã© a possiÃ§Ã£o do proximo elemento
 			}
 				printf("%c\n",Lista->info);
 				getch();
